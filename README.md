@@ -53,8 +53,17 @@ owner=#######
 env=Library
 hpervisor_id=hostname
 ```
+Before starting virt-who you manually test the configuration.
+```
+# virt-who --print
+```
 
-Next we will start the vir-who daemon
+For an easier readout try:
+```
+# virt-who --print | jq
+```
+
+Let's start the virt-who daemon.
 ```
 # systemctl start virt-who
 ```
@@ -92,6 +101,9 @@ owner=#######
 env=Library
 hpervisor_id=hostname
 ```
+
+You can test this new configuration using the same command above.  Remember to restart the virt-who daemon.
+
 
 ## References
 - [Configuring virt-who with Red Hat Subscription Management](https://www.youtube.com/watch?v=0KptauyDAxE) - YouTube Video
