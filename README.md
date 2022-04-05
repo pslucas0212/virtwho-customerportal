@@ -13,6 +13,18 @@ I registered the system with the activation key to Red Hat customer portal.  **N
  I checked to make sure that the RHEL 8 repos are enabled on the VM.
 ```
 # subscription-manager repos --list-enabled
++----------------------------------------------------------+
+    Available Repositories in /etc/yum.repos.d/redhat.repo
++----------------------------------------------------------+
+Repo ID:   rhel-8-for-x86_64-appstream-rpms
+Repo Name: Red Hat Enterprise Linux 8 for x86_64 - AppStream (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel8/$releasever/x86_64/appstream/os
+Enabled:   1
+
+Repo ID:   rhel-8-for-x86_64-baseos-rpms
+Repo Name: Red Hat Enterprise Linux 8 for x86_64 - BaseOS (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel8/$releasever/x86_64/baseos/os
+Enabled:   1
 ```
 
 Check to see if virt-who is installed.
@@ -39,7 +51,7 @@ org name: #######
 org ID: #######
 ```
 
-The vCenter user ID needs read-only access to all objects in the vCenter.  I created a user ID named 'virt-who' on my vCenter.
+The vCenter user ID needs read-only access to all objects in the vCenter.  I created a user ID named 'virt-who' on my vCenter and gave it read-only access.
 
 Now create and edit the virt-who.conf file.
 ```
