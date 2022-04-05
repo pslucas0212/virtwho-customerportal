@@ -55,7 +55,7 @@ hpervisor_id=hostname
 
 
 ## References
-- [Configuring virt-who with Red Hat Subscription Management](Configuring virt-who with Red Hat Subscription Management) - YouTube Video
+- [Configuring virt-who with Red Hat Subscription Management](https://www.youtube.com/watch?v=0KptauyDAxE) - YouTube Video
 - [Why and when do I need Virt-Who?](https://access.redhat.com/articles/1300283)
 - [How to configure virt-who for an ESX/ESXi host with RHSM?](https://access.redhat.com/solutions/3243861)
 - [Using RHEL Virtual Data Center Subscription - Master Article](https://access.redhat.com/solutions/3243071)
