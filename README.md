@@ -52,6 +52,21 @@ env=Library
 hpervisor_id=hostname
 ```
 
+Next we will start the vir-who daemon
+```
+# systemctl start virt-who
+```
+
+Let's check the status virt-who
+```
+# systemctl status virt-who
+```
+
+Make virt-who startup automatically when the server is rebooted.
+```
+# systemctl enable virt-who
+Created symlink /etc/systemd/system/multi-user.target.wants/virt-who.service → /usr/lib/systemd/system/virt-who.service.
+```
 
 
 ## References
