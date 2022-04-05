@@ -7,13 +7,13 @@ For this tutorial I created a small RHEL VM (1 vCPU wth 2 GB RAM) running on VMW
 I setup an activation key in the Red Hat customer portal with RHEL standard support subscription attached.  I then registered the system with the activation key to Red Hat customer portal.  **Note:** I have Simple Content Access enabled on my Red Hat customer portal.
 
 ```
- # subscription-manager register --org=xxxxxxxxx --activationkey=your_key_here
- ```
+# subscription-manager register --org=xxxxxxxxx --activationkey=your_key_here
+```
  
  I checked to make sure that the RHEL 8 repos are enabled on the VM.
- ```
- # subscription-manager repos --list-enabled
- ```
+```
+# subscription-manager repos --list-enabled
+```
 
 Check to see if virt-who is installed.
 ```
