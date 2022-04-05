@@ -1,10 +1,10 @@
-# Configuring virtwho to work with the Red Hat Customer Portal
+# Configuring virt-who to work with the Red Hat Customer Portal
 
-In this tutorial we will look at configuring virtwho to provide hypervisor host information when the RHEL VM is registered to the customer portal.
+In this tutorial we will look at configuring virt-who to provide hypervisor host information when the RHEL VM is registered to the customer portal.
 
 For this tutorial I created a small RHEL VM (1 vCPU wth 2 GB RAM) running on VMWare to host virtwho.
 
-I setup an activation key in the Red Hat customer portal with RHEL standard support subscription attached.  I then registered the system with the activation key to Red Hat customer portal.  **Note:** I have Simple Content Access enabled on my Red Hat customer portal.
+I registered the system with the activation key to Red Hat customer portal.  **Note:** I have Simple Content Access enabled on my Red Hat customer portal.
 
 ```
 # subscription-manager register --org=xxxxxxxxx --activationkey=your_key_here
@@ -27,7 +27,7 @@ If virt-who is not installed, let's install it.
 Complete!
 ```
 
-The virt-who installation creates template configuration file that we can use to setup virt-who for environment.  The template configuration file is located under the /etc/virt-who.d/ directory.
+The virt-who installation creates template configuration file that we can use to setup virt-who for environment.  The template configuration file is located under the /etc/virt-who.d/ directory.  
 
 
 We will create the virt-who.conf file. Before edting the file we need the organzation id under which the RHEL VM is registered. 
@@ -39,13 +39,15 @@ org name: #######
 org ID: #######
 ```
 
+The vCenter user ID needs read-only access to all objects in the vCenter.  I created a user ID named 'virt-who' on my vCenter.
+
 Now create and edit the virt-who.conf file.
 ```
 # vi virt-who.conf
 [vmware]
 type=esx
 server=vsca01.example.com
-username=user
+username=virt-who@vsphere.local
 password=password
 owner=#######
 env=Library
@@ -68,6 +70,28 @@ Make virt-who startup automatically when the server is rebooted.
 Created symlink /etc/systemd/system/multi-user.target.wants/virt-who.service → /usr/lib/systemd/system/virt-who.service.
 ```
 
+Let's encrypt the password contained in the virt-who.conf file.
+
+To do that run the virt-who-password command and supply the vCenter password.
+```
+virt-who-password
+Password: 
+Use following as value for encrypted_password key in the configuration file:
+14809...98a885d4cecd
+```
+
+Change your virt-who.conf file to the following.
+```
+# vi virt-who.conf
+[vmware]
+type=esx
+server=vsca01.example.com
+username=virt-who@vsphere.local
+encrypted_password=14809...98a885d4cecd
+owner=#######
+env=Library
+hpervisor_id=hostname
+```
 
 ## References
 - [Configuring virt-who with Red Hat Subscription Management](https://www.youtube.com/watch?v=0KptauyDAxE) - YouTube Video
