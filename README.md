@@ -45,7 +45,7 @@ The virt-who installation creates template configuration file that we can use to
 We will create the virt-who.conf file. Before edting the file we need the organzation id under which the RHEL VM is registered. 
 ```
 # subscription-manager identity
-system identity: 2278e9a5-90d2-41d3-ba51-2b605607f2ba
+system identity: 2278e9a5-...-2b605607f2ba
 name: virt-who.example.com
 org name: #######
 org ID: #######
