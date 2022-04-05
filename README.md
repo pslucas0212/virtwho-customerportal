@@ -132,6 +132,9 @@ hypervisor_id=hostname
 ```
 
 You can test this new configuration using the same command above.  Remember to restart the virt-who daemon.
+```
+# systemctl restart virt-who
+```
 
 
 ## References
