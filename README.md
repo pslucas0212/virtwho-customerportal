@@ -64,7 +64,7 @@ password=password
 owner=#######
 hypervisor_id=hostname
 ```
-If you have more than one vCenter, simply create as many sections in the configuration file to match the nubmer of vCenters.
+If you have more than one vCenter, simply create as many sections in the configuration file to match the number of vCenters.
 ```
 [vcenter01]
 type=esx
