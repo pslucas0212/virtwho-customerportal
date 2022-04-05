@@ -1,8 +1,8 @@
-# Configuring virt-who to work with the Red Hat Customer Portal
+# Configuring virt-who with vSphere to Report Hypervisor Host Information to the Red Hat Customer Portal
 
-In this tutorial we will look at configuring virt-who to provide hypervisor host information when the RHEL VM is registered to the customer portal.
+In this tutorial we will look at configuring virt-who to provide vSphere hypervisor host information when the RHEL VM is registered to the customer portal.
 
-For this tutorial I created a small RHEL VM (1 vCPU wth 2 GB RAM) running on VMWare to host virtwho.
+For this tutorial I created a small RHEL VM (1 vCPU wth 2 GB RAM) running on VMWare to host the virt-who daemon.
 
 I registered the system with the activation key to Red Hat customer portal.  **Note:** I have Simple Content Access enabled on my Red Hat customer portal.
 
