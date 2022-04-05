@@ -50,8 +50,7 @@ server=vsca01.example.com
 username=virt-who@vsphere.local
 password=password
 owner=#######
-env=Library
-hpervisor_id=hostname
+hypervisor_id=hostname
 ```
 Before starting virt-who you manually test the configuration.
 ```
@@ -98,8 +97,7 @@ server=vsca01.example.com
 username=virt-who@vsphere.local
 encrypted_password=14809...98a885d4cecd
 owner=#######
-env=Library
-hpervisor_id=hostname
+hypervisor_id=hostname
 ```
 
 You can test this new configuration using the same command above.  Remember to restart the virt-who daemon.
