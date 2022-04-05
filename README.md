@@ -53,7 +53,7 @@ org ID: #######
 
 The vCenter user ID needs read-only access to all objects in the vCenter.  I created a user ID named 'virt-who' on my vCenter and gave it read-only access.
 
-Now create and edit the virt-who.conf file.
+Now create and edit the virt-who.conf file.  This configuration file is self-explanatory.  The hypervisor_id setting is a default setting we need in the configuration file.  
 ```
 # vi virt-who.conf
 [vmware]
@@ -64,6 +64,25 @@ password=password
 owner=#######
 hypervisor_id=hostname
 ```
+If you have more than one vCenter, simply create as many sections in the configuration file to match the nubmer of vCenters.
+```
+[vcenter01]
+type=esx
+server=vsca01.example.com
+username=virt-who@vsphere.local
+password=password
+owner=#######
+hypervisor_id=hostname
+
+[vcenter02]
+type=esx
+server=vsca02.example.com
+username=virt-who@vsphere.local
+password=password
+owner=#######
+hypervisor_id=hostname
+```
+
 Before starting virt-who you manually test the configuration.
 ```
 # virt-who --print
