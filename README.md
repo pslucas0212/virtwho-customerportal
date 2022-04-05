@@ -88,7 +88,7 @@ Before starting virt-who you manually test the configuration.
 # virt-who --print
 ```
 
-For an easier readout try:
+For an easier readout of the configuration test, try the following command.
 ```
 # virt-who --print | jq
 ```
