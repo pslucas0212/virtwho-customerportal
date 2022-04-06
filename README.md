@@ -11,8 +11,20 @@ I registered the system with the activation key to Red Hat customer portal. Reme
 ```
 # subscription-manager register --org=xxxxxxxxx --activationkey=your_key_here
 ```
+
+When using SCA, I am not attaching a subscription to my RHEL VM. When you run subscription-manage status, you will see that SCA is enabled and that you can attach any required content repositories to your RHEL VM.
+```
+# subscription-manager status
++-------------------------------------------+
+   System Status Details
++-------------------------------------------+
+Overall Status: Disabled
+Content Access Mode is set to Simple Content Access. This host has access to content, regardless of subscription status.
+
+System Purpose Status: Disabled
+```
  
- I checked to make sure that the RHEL 8 repos are enabled on the VM.
+I checked to make sure that the RHEL 8 repos are enabled on the VM.  When creaing the RHEL 8 VM from an ISO image on vSphere, the RHEL 8 repos are automatically enabled.
 ```
 # subscription-manager repos --list-enabled
 +----------------------------------------------------------+
@@ -66,6 +78,11 @@ password=password
 owner=#######
 hypervisor_id=hostname
 ```
+
+If you want to exclude exsi hosts from virt-who reporting for a particular vCenter add the filert hosts opton to the virt-who.conf file.  Use commas to separate host names.  See the following example filter hosts line entry.
+```
+filter_hosts=esx02.example.com, esx04.example.com
+``
 If you have more than one vCenter, simply create as many sections in the configuration file to match the number of vCenters.
 ```
 [vcenter01]
