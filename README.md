@@ -1,10 +1,12 @@
 # Configuring virt-who with vSphere to Report Hypervisor Host Information to the Red Hat Customer Portal
 
-In this tutorial we will look at configuring virt-who to provide vSphere hypervisor host information when the RHEL VM is registered to the customer portal.
+If you are not running Red Hat Satellite as part of your Red Hat Enterprise Linux (RHEL) managment environment, you may still have the need to run virt-who separeatly to track the deployment of RHEL VMs with RHEL or Virtual Data Center subscriptions.  If you have Simple Content Access enabled on your customer portal, you would not have the need to attach a specific subscription to the RHEL VM.  With SCA enabled as the consumer of Red Hat subscriptions you will still need to track your usage to be compliant with your Red Hat agreement, and virt-who can assist with this.
+
+In this tutorial we will look at configuring virt-who to provide vSphere hypervisor host information when the RHEL VM is registered to the customer portal.  We can see the RHEL VM information in both the customer portal and the Insights console.
 
 For this tutorial I created a small RHEL VM (1 vCPU wth 2 GB RAM) running on VMWare to host the virt-who daemon.
 
-I registered the system with the activation key to Red Hat customer portal.  **Note:** I have Simple Content Access enabled on my Red Hat customer portal.
+I registered the system with the activation key to Red Hat customer portal. Remember I have Simple Content Access enabled on my Red Hat customer portal.
 
 ```
 # subscription-manager register --org=xxxxxxxxx --activationkey=your_key_here
