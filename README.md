@@ -82,7 +82,7 @@ hypervisor_id=hostname
 If you want to exclude exsi hosts from virt-who reporting for a particular vCenter add the filert hosts opton to the virt-who.conf file.  Use commas to separate host names.  See the following example filter hosts line entry.
 ```
 filter_hosts=esx02.example.com, esx04.example.com
-``
+```
 If you have more than one vCenter, simply create as many sections in the configuration file to match the number of vCenters.
 ```
 [vcenter01]
