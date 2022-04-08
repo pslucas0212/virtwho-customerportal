@@ -163,6 +163,12 @@ Head over to the [Red Hat customer portal](https://access.redhat.com) and login.
 
 After you login click on the Subscriptions link in the upper left hand corner of the Red Hat customer portal landing page.
 ![Red Hat Customer Portal | Subscriptions](images/virtwho01.png)
+  
+On the Subscriptions page, click the Systems tab.  On the Systems page you will see the hypervisors that virt-who is aware of via the virt-who.conf file.  
+![Subscriptions | Systems](images/virtwho02.png)
+  
+Click on a hypervisor lin in the Systems page to get to the detial information for the hypervisor.
+![Systems | Details](images/virtwho03.png)
 
 ### Trouble shooting and additional notes
 - In this tutorial my vSphere Client version is 6.7.0.47000. I created the virt-who user id under the Administration - Single Sign-on - User and Groups menu. The user id  "virt-who" is part of the vsphere.local domain.  Under the Administration - Access Control - Global Permissions menu, I create a Read-Only permission with virt-who as the user.  
