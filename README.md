@@ -160,7 +160,7 @@ You can test this new configuration using the same command above.  Remember to r
 ```
 
 ### Trouble shooting and additional notes
-- In this tutorial my vSphere Client version is 6.7.0.47000. I created the virt-who user id under the Administration - Single Sign-on - User and Groups menug. The user id  "virt-who" is part of the vsphere.local domain.  Under the Administration - Access Control - Global Permissions menu, I create a Read-Only permission with virt-who as the user.  
+- In this tutorial my vSphere Client version is 6.7.0.47000. I created the virt-who user id under the Administration - Single Sign-on - User and Groups menu. The user id  "virt-who" is part of the vsphere.local domain.  Under the Administration - Access Control - Global Permissions menu, I create a Read-Only permission with virt-who as the user.  
 - Test the virt-who VMWare user id and password with a vSphere client.
 - Test virt-who VMWare user id with the password unencrypted in the virt-who conf file.  When the test is successful, encrypt the password and retest
 - If you test the virt-who command with the print option (or with any other command line options), make sure you are "running" as root (sudo or su).
