@@ -4,7 +4,7 @@ If you are not using Red Hat Satellite as part of your Red Hat Enterprise Linux 
 
 In this tutorial we will look at configuring virt-who to provide vSphere hypervisor host information when the RHEL VM is registered to the customer portal.  We can see the RHEL VM information in both the customer portal and the Insights console.
 
-For this tutorial I created a small RHEL VM (1 vCPU wth 2 GB RAM) to host the virt-who daemon.  The VM is gather data from a 3 node EXSi cluster with local credentials.
+For this tutorial I created a small RHEL VM (1 vCPU wth 2 GB RAM) to host the virt-who daemon.  The vort-ho is gather data from a 3 node EXSi cluster with local credentials.
 
 I registered the system with the activation key to Red Hat customer portal. Remember I have Simple Content Access enabled on my Red Hat customer portal.
 
@@ -155,11 +155,11 @@ You can test this new configuration using the same command above.  Remember to r
 # systemctl restart virt-who
 ```
 
-### Trouble shooting.
-- In this tutorial my vSphere Client version is 6.7.0.47000. I created the virt-who user id under the Administration Single Sign-on optionsingle sign-on, The user id  "virt-who" created under the vsphere.local domain.  Under Access Control Global Permissions, I create a Read-Only role with virt-who as the user.  
+### Trouble shooting and additional notes
+- In this tutorial my vSphere Client version is 6.7.0.47000. I created the virt-who user id under the Administration - Single Sign-on - User and Groups menug. The user id  "virt-who" is part of the vsphere.local domain.  Under the Administration - Access Control - Global Permissions menu, I create a Read-Only permission with virt-who as the user.  
 - Test the virt-who VMWare user id and password with a vSphere client.
-- Test virt-who VMWare user id with the password unencrypted in the virt-who conf file
-- If you test the virt-who command with the print option, make sure you are "running" as root (sudo or su).
+- Test virt-who VMWare user id with the password unencrypted in the virt-who conf file.  When the test is successful, encrypt the password and retest
+- If you test the virt-who command with the print option (or with any other command line options), make sure you are "running" as root (sudo or su).
 
 ## References
 - [Configuring virt-who with Red Hat Subscription Management](https://www.youtube.com/watch?v=0KptauyDAxE) - YouTube Video
