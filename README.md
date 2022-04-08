@@ -10,7 +10,7 @@ In this tutorial we will look at configuring virt-who to provide vSphere hypervi
 For this tutorial I created a small RHEL VM (1 vCPU wth 2 GB RAM) to host the virt-who daemon.  This vort-who instance is gathering data from a 3 node EXSi cluster with local credentials.
 
 ### Installing, configuring and enabling virt-who
-I registered the system with the activation key to Red Hat customer portal. Remember I have Simple Content Access enabled on my Red Hat customer portal, so I won't be attaching a subscription to this RHEL instance after I register it.
+I registered the system with an activation key to Red Hat customer portal. Remember I have Simple Content Access enabled on my Red Hat customer portal, so I won't be attaching a subscription to this RHEL instance after I register it.
 
 ```
 # subscription-manager register --org=xxxxxxxxx --activationkey=your_key_here
