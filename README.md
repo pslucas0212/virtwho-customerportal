@@ -170,6 +170,12 @@ On the Subscriptions page, click the Systems tab.  On the Systems page you will 
 Click on a hypervisor lin in the Systems page to get to the detial information for the hypervisor.
 ![Systems | Details](images/virtwho03.png)
 
+From the Systems page, if you chose a RHEL instance, you will also be able to the hypervisor that the RHEL VM is running on in the RHEL instance's Detail page.
+
+![Sytem | Details](images/virtwho04.png)
+
+
+
 ### Trouble shooting and additional notes
 - In this tutorial my vSphere Client version is 6.7.0.47000. I created the virt-who user id under the Administration - Single Sign-on - User and Groups menu. The user id  "virt-who" is part of the vsphere.local domain.  Under the Administration - Access Control - Global Permissions menu, I create a Read-Only permission with virt-who as the user.  
 - Test the virt-who VMWare user id and password with a vSphere client.
