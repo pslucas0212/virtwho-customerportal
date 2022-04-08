@@ -161,8 +161,9 @@ You can test this new configuration using the same command above.  Remember to r
 ### Viewing the virt-who reporting
 Head over to the [Red Hat customer portal](https://access.redhat.com) and login.
 
+After you login click on the Subscriptions link in the upper left hand corner of the Red Hat customer portal landing page.
+![Red Hat Customer Portal | Subscriptions](images/virtwho01.png)
 
-After you login click on the Subscriptions link in the upper left hand corner of the Red Hat customer portal
 ### Trouble shooting and additional notes
 - In this tutorial my vSphere Client version is 6.7.0.47000. I created the virt-who user id under the Administration - Single Sign-on - User and Groups menu. The user id  "virt-who" is part of the vsphere.local domain.  Under the Administration - Access Control - Global Permissions menu, I create a Read-Only permission with virt-who as the user.  
 - Test the virt-who VMWare user id and password with a vSphere client.
