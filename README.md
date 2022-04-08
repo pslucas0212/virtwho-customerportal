@@ -102,7 +102,7 @@ owner=#######
 hypervisor_id=hostname
 ```
 
-Before starting virt-who you manually test the configuration.
+Before starting virt-who you can manually test the configuration.
 ```
 # virt-who --print
 ```
@@ -132,7 +132,7 @@ Let's encrypt the password contained in the virt-who.conf file.
 
 To do that run the virt-who-password command and supply the vCenter password.
 ```
-virt-who-password
+# virt-who-password
 Password: 
 Use following as value for encrypted_password key in the configuration file:
 14809...98a885d4cecd
