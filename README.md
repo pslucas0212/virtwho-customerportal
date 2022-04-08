@@ -1,10 +1,10 @@
 # Configuring virt-who with vSphere to Report Hypervisor Host Information to the Red Hat Customer Portal
 
-If you are not running Red Hat Satellite as part of your Red Hat Enterprise Linux (RHEL) managment environment, you may still have the need to run virt-who separeatly to track the deployment of RHEL VMs with RHEL or Virtual Data Center subscriptions.  If you have Simple Content Access enabled on your customer portal, you would not have the need to attach a specific subscription to the RHEL VM.  With SCA enabled as the consumer of Red Hat subscriptions you will still need to track your usage to be compliant with your Red Hat agreement, and virt-who can assist with this.
+If you are not using Red Hat Satellite as part of your Red Hat Enterprise Linux (RHEL) managment environment, you may still have the need to run virt-who to seperately gather deployment information for RHEL VMs associated with your RHEL or Virtual Data Center (VDC) subscriptions.  If you have Simple Content Access enabled on your customer portal, you would not have the need to attach a specific subscription to a RHEL VM.  But with SCA enabled you as the consumer of Red Hat subscriptions will need to track your subscription usage to be compliant with your Red Hat agreement, and virt-who can assist with providing this data.
 
 In this tutorial we will look at configuring virt-who to provide vSphere hypervisor host information when the RHEL VM is registered to the customer portal.  We can see the RHEL VM information in both the customer portal and the Insights console.
 
-For this tutorial I created a small RHEL VM (1 vCPU wth 2 GB RAM) running on VMWare to host the virt-who daemon.
+For this tutorial I created a small RHEL VM (1 vCPU wth 2 GB RAM) to host the virt-who daemon.  The VM is gather data from a 3 node EXSi cluster with local credentials.
 
 I registered the system with the activation key to Red Hat customer portal. Remember I have Simple Content Access enabled on my Red Hat customer portal.
 
@@ -155,6 +155,11 @@ You can test this new configuration using the same command above.  Remember to r
 # systemctl restart virt-who
 ```
 
+### Trouble shooting.
+- In this tutorial my vSphere Client version is 6.7.0.47000. I created the virt-who user id under the Administration Single Sign-on optionsingle sign-on, The user id  "virt-who" created under the vsphere.local domain.  Under Access Control Global Permissions, I create a Read-Only role with virt-who as the user.  
+- Test the virt-who VMWare user id and password with a vSphere client.
+- Test virt-who VMWare user id with the password unencrypted in the virt-who conf file
+- If you test the virt-who command with the print option, make sure you are "running" as root (sudo or su).
 
 ## References
 - [Configuring virt-who with Red Hat Subscription Management](https://www.youtube.com/watch?v=0KptauyDAxE) - YouTube Video
