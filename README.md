@@ -1,7 +1,7 @@
 # Configuring virt-who with vSphere to Report Hypervisor Host Information to the Red Hat Customer Portal
 
 ### Introduction
-If Red Hat Satellite is not part of your Red Hat Enterprise Linux (RHEL) managment environment, you may still have the need to run virt-who to gather deployment information for RHEL VMs associated with your RHEL or Virtual Data Center (VDC) subscriptions when running in a virtaulized environment.  
+If [Red Hat Satellite](https://www.redhat.com/en/technologies/management/smart-management) is not part of your Red Hat Enterprise Linux (RHEL) managment environment, you may still have the need to run virt-who to gather deployment information for RHEL VMs associated with your RHEL or Virtual Data Center (VDC) subscriptions when running in a virtaulized environment.  
 
 If you have Simple Content Access (SCA) enabled on your customer portal, you would not need to attach a subscription to a RHEL VM.  But with SCA enabled you as the consumer of Red Hat subscriptions will need to track your subscription usage to be compliant with your Red Hat agreement, and virt-who can assist with providing to link RHEL VMs to specific hypervisors.
 
