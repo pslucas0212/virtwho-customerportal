@@ -182,6 +182,9 @@ From the Systems page, if you chose a RHEL instance, you will also be able to th
 - Test virt-who VMWare user id with the password unencrypted in the virt-who conf file.  When the test is successful, encrypt the password and retest
 - If you test the virt-who command with the print option (or with any other command line options), make sure you are "running" as root (sudo or su).
 
+## Conclusion
+In this tutorial we learned about virt-who and how we can use its reporting information to both understand RHEL subscription consumption and where our RHEL VMs are hosted.
+
 ## References
 - [Configuring virt-who with Red Hat Subscription Management](https://www.youtube.com/watch?v=0KptauyDAxE) - YouTube Video
 - [Why and when do I need Virt-Who?](https://access.redhat.com/articles/1300283)
