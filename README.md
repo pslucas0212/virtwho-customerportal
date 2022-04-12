@@ -69,7 +69,7 @@ org name: #######
 org ID: #######
 ```
 
-The vCenter user ID needs read-only access to all objects in the vCenter.  I created a user ID named 'virt-who' on my vCenter and gave it read-only access.
+The vCenter user ID needs read-only access to all objects in the vCenter.  For this tutorial, I created a user ID named 'virt-who' on my vCenter and gave it read-only access.
 
 Now create and edit the virt-who.conf file.  This configuration file is self-explanatory.  The hypervisor_id setting is a default setting we need in the configuration file.  
 ```
