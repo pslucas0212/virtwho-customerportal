@@ -71,7 +71,7 @@ org ID: #######
 
 The vCenter user ID needs read-only access to all objects in the vCenter.  See the troubleshooting section below if you need guidance in createing the user id. 
 
-Now create and edit the virt-who.conf file.  This configuration file is self-explanatory.  The hypervisor_id setting is a default setting we need in the configuration file.  
+Now let's create and edit the virt-who.conf file.  This configuration file is self-explanatory.  The hypervisor_id setting is a default setting we need in the configuration file.  
 ```
 # vi virt-who.conf
 [vmware]
