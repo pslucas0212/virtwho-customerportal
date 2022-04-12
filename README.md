@@ -5,7 +5,7 @@ If [Red Hat Satellite](https://www.redhat.com/en/technologies/management/smart-m
 
 If you have Simple Content Access (SCA) enabled on your customer portal, you would not need to attach a subscription to a RHEL VM.  But with SCA enabled you as the consumer of Red Hat subscriptions will need to track your subscription usage to be compliant with your Red Hat agreement, and virt-who can assist with providing data to link RHEL VMs to specific hypervisors.
 
-In this tutorial we will look at configuring virt-who to provide vSphere hypervisor host information when the RHEL VM is registered to the customer portal.  We can see the hypervisor and RHEL VM information in the customer portal.
+In this tutorial we will look at configuring virt-who to provide vSphere hypervisor host information when the RHEL VM is registered to the customer portal.  We can see the hypervisor and RHEL VM information in the customer portal and on the Red Hat Hybrid Cloud Console.
 
 For this tutorial I created a small RHEL VM (1 vCPU wth 2 GB RAM) to host the virt-who daemon.  This virt-who instance is gathering data from a 3 node EXSi cluster with local credentials.
 
