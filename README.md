@@ -28,7 +28,7 @@ Content Access Mode is set to Simple Content Access. This host has access to con
 System Purpose Status: Disabled
 ```
  
-I checked to make sure that the RHEL 8 repos are enabled on the VM.  When creaing the RHEL 8 VM from an ISO image on vSphere, the RHEL 8 repos are automatically enabled.
+I checked to make sure that the RHEL 8 repos are enabled on the VM.  When creating the RHEL 8 VM from an ISO image on vSphere, the RHEL 8 repos are automatically enabled.
 ```
 # subscription-manager repos --list-enabled
 +----------------------------------------------------------+
@@ -83,11 +83,11 @@ owner=#######
 hypervisor_id=hostname
 ```
 
-If you want to exclude exsi hosts from virt-who reporting for a particular vCenter add the filter hosts opton to the virt-who.conf file.  Use commas to separate host names.  See the following example filter hosts line entry.
+If you want to exclude exsi hosts from virt-who reporting for a particular VMWare cluster, add the filter hosts opton to the virt-who.conf file.  Use commas to separate host names.  See the following example filter hosts line entry.
 ```
 filter_hosts=esx02.example.com, esx04.example.com
 ```
-If you have more than one vCenter, simply create as many sections in the configuration file to match the number of vCenters.
+If you have more than one vCenter, simply create as many sections in the configuration file to match the number of vCenter clusters.
 ```
 [vcenter01]
 type=esx
@@ -121,7 +121,7 @@ Let's start the virt-who daemon.
 # systemctl start virt-who
 ```
 
-Let's check the status virt-who
+Let's check the status of the virt-who daemon.
 ```
 # systemctl status virt-who
 ```
@@ -161,29 +161,29 @@ You can test this new configuration using the same command above.  Remember to r
 ### Viewing the virt-who reporting
 Head over to the [Red Hat customer portal](https://access.redhat.com) and login.
 
-After you login click on the Subscriptions link in the upper left hand corner of the Red Hat customer portal landing page.
+After you login, in the Red Hat customer poratl, click on the Subscriptions link in the upper left hand corner of the Red Hat customer portal landing page.
 ![Red Hat Customer Portal | Subscriptions](images/virtwho01.png)
   
 On the Subscriptions page, click the Systems tab.  On the Systems page you will see the hypervisors that virt-who is aware of via the virt-who.conf file.  
 ![Subscriptions | Systems](images/virtwho02.png)
   
-Click on a hypervisor link in the Systems page to get to the detail information for the hypervisor.
+Click on a hypervisor link in the Systems page to get to the detail information for a particular hypervisor.
 ![Systems | Details](images/virtwho03.png)
 
-From the Systems page, if you chose a RHEL instance, you will also be able to the hypervisor that the RHEL VM is running on in the RHEL instance's Detail page.
+From the Systems page, if you chose a RHEL instance, you will also be able to see the hypervisor that the RHEL VM is running on in the RHEL VM's instance Detail page.
 
 ![Sytem | Details](images/virtwho04.png)
 
 Now let's head over to the Red Hat Hybrid Console and login.
 [Red Hat Hybrid Console](cloud.redhat.com/)
 
-After you login the Red Hat Hybrid Console, chose Red Hat Enterprise Linux from the side menu.
+After you login to the Red Hat Hybrid Console, chose Red Hat Enterprise Linux from the side menu.
 ![Red Hat Enterprise Linux](images/virtwho05.png)
 
 On the Red Hat Enterprise Linux page expand the Subscriptions option on the side menu and click the All RHEL link.  Scroll down on the subscription page to Insights registered RHEL servers and VMWare Hypervisors that are hosting RHEL VMs.
 ![All RHEL](images/virtwho06.png)
 
-You can exand the VMWare Hypervisor link to see what guests machines are running on a particular hypervisor.  Also note that when the VMWare Hypervisor fist shows inthe All RHEL subscription section, it is listed with a UUID.  We will change the UUID to the hypervisor name in the next steps.
+You can expand the VMWare Hypervisor link to see what guests machines are running on a particular hypervisor.  Also note that when the VMWare Hypervisor name first shows up in the All RHEL subscription section, it is listed with as am UUID.  We will change the UUID to the hypervisor name in the next steps.
 ![Hypervisor list](images/virtwho07.png)
 
 To update the hypervsior name from the UUID to something more meaningful, click on the hypervisor link in the All RHEL page.
@@ -195,7 +195,7 @@ You will be taken to the Inventory page of the Hypervisor.  On the Inventory pag
 A dialog box will open where you can edit the Display name.  After changing the Display name click the blue Save button.  Repeat this step for the Ansible hostname.
 ![Edit Display Name](images/virthwo10.png)
 
-Back on the Inventory page, you will see the Display name has been updated.  The display name in the Subscrticiptons | All RHEL page will be update after the next check with the Red Hat Hybrid Consoles which typically will happen in 24 hours.
+Back on the Inventory page, you will see the Display name has been updated.  The display name in the Subscrticiptons | All RHEL page will be updated after the next checkin with the Red Hat Hybrid Consoles which typically happens in 24 hours.
 ![Hypervisor Inventory Page](images/virtwho11.png)
 
 
