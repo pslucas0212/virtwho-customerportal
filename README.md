@@ -158,7 +158,7 @@ You can test this new configuration using the same command above.  Remember to r
 ```
 # systemctl restart virt-who
 ```
-### Viewing the virt-who reporting
+### Viewing the virt-who reporting in the Red Hat Customer Portal and the Red Hat Hybrid Cloud Console
 Head over to the [Red Hat customer portal](https://access.redhat.com) and login.
 
 After you login, in the Red Hat customer poratl, click on the Subscriptions link in the upper left hand corner of the Red Hat customer portal landing page.
@@ -174,10 +174,10 @@ From the Systems page, if you chose a RHEL instance, you will also be able to se
 
 ![Sytem | Details](images/virtwho04.png)
 
-Now let's head over to the Red Hat Hybrid Console and login.
+Now let's head over to the Red Hat Hybrid Cloud Console and login.
 [Red Hat Hybrid Console](cloud.redhat.com/)
 
-After you login to the Red Hat Hybrid Console, chose Red Hat Enterprise Linux from the side menu.
+After you login to the Red Hat Hybrid Cloud Console, chose Red Hat Enterprise Linux from the side menu.
 ![Red Hat Enterprise Linux](images/virtwho05.png)
 
 On the Red Hat Enterprise Linux page expand the Subscriptions option on the side menu and click the All RHEL link.  Scroll down on the subscription page to Insights registered RHEL servers and VMWare Hypervisors that are hosting RHEL VMs.
@@ -195,7 +195,7 @@ You will be taken to the Inventory page of the Hypervisor.  On the Inventory pag
 A dialog box will open where you can edit the Display name.  After changing the Display name click the blue Save button.  Repeat this step for the Ansible hostname.
 ![Edit Display Name](images/virthwo10.png)
 
-Back on the Inventory page, you will see the Display name has been updated.  The display name in the Subscrticiptons | All RHEL page will be updated after the next checkin with the Red Hat Hybrid Consoles which typically happens in 24 hours.
+Back on the Inventory page, you will see the Display name has been updated.  The display name in the Subscrticiptons | All RHEL page will be updated after the next checkin with the Red Hat Hybrid Cloud Console which typically happens in 24 hours.
 ![Hypervisor Inventory Page](images/virtwho11.png)
 
 
