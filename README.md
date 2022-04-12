@@ -69,7 +69,7 @@ org name: #######
 org ID: #######
 ```
 
-The vCenter user ID needs read-only access to all objects in the vCenter.  For this tutorial, I created a user ID named 'virt-who' on my vCenter.  Here are the steps I followed on vCenter to create the virt-who ID.  I was logged in on vCenter as an administrator.  In the vSphere Client under single sign-on, I set up a user "virt-who" under the vsphere.local domain.  And then under Access Control Global Permissions, I set up a Read-Only role with virt-who as the user.  
+The vCenter user ID needs read-only access to all objects in the vCenter.  See the troubleshooting section below if you need guidance in createing the user id. 
 
 Now create and edit the virt-who.conf file.  This configuration file is self-explanatory.  The hypervisor_id setting is a default setting we need in the configuration file.  
 ```
