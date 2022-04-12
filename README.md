@@ -193,7 +193,7 @@ You will be taken to the Inventory page of the Hypervisor.  On the Inventory pag
 ![Display Name](images/virtwho09.png)
 
 A dialog box will open where you can edit the Display name.  After changing the Display name click the blue Save button.  Repeat this step for the Ansible hostname.
-![Edit Display Name](images/virthwo10.png)
+![Edit Display Name](images/virtwho10.png)
 
 Back on the Inventory page, you will see the Display name has been updated.  The display name in the Subscriptions | All RHEL page will be updated after the next check in with the Red Hat Hybrid Cloud Console which typically happens in 24 hours.
 ![Hypervisor Inventory Page](images/virtwho11.png)
