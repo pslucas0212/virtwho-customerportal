@@ -175,7 +175,7 @@ From the Systems page, if you chose a RHEL instance, you will also be able to th
 ![Sytem | Details](images/virtwho04.png)
 
 Now let's head over to the Red Hat Hybrid Console and login.
-![Red Hat Hybrid Console[(cloud.redhat.com/)
+[Red Hat Hybrid Console](cloud.redhat.com/)
 
 After you login the Red Hat Hybrid Console, chose Red Hat Enterprise Linux from the side menu.
 ![Red Hat Enterprise Linux](images/virtwho05.png)
@@ -184,7 +184,7 @@ On the Red Hat Enterprise Linux page expand the Subscriptions option on the side
 ![All RHEL](images/virtwho06.png)
 
 You can exand the VMWare Hypervisor link to see what guests machines are running on a particular hypervisor.  Also note that when the VMWare Hypervisor fist shows inthe All RHEL subscription section, it is listed with a UUID.  We will change the UUID to the hypervisor name in the next steps.
-![Hypervisor list](images07.png)
+![Hypervisor list](images/virtwho07.png)
 
 
 
