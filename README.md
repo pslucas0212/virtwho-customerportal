@@ -69,7 +69,7 @@ org name: #######
 org ID: #######
 ```
 
-The vCenter user ID needs read-only access to all objects in the vCenter.  For this tutorial, I created a user ID named 'virt-who' on my vCenter and gave it read-only access.
+The vCenter user ID needs read-only access to all objects in the vCenter.  For this tutorial, I created a user ID named 'virt-who' on my vCenter.  Here are the steps I followed on vCenter to create the virt-who ID.  I was logged in on vCenter as an administrator.  In the vSphere Client under single sign-on, I set up a user "virt-who" under the vsphere.local domain.  And then under Access Control Global Permissions, I set up a Read-Only role with virt-who as the user.  
 
 Now create and edit the virt-who.conf file.  This configuration file is self-explanatory.  The hypervisor_id setting is a default setting we need in the configuration file.  
 ```
@@ -83,7 +83,7 @@ owner=#######
 hypervisor_id=hostname
 ```
 
-If you want to exclude exsi hosts from virt-who reporting for a particular vCenter add the filert hosts opton to the virt-who.conf file.  Use commas to separate host names.  See the following example filter hosts line entry.
+If you want to exclude exsi hosts from virt-who reporting for a particular vCenter add the filter hosts opton to the virt-who.conf file.  Use commas to separate host names.  See the following example filter hosts line entry.
 ```
 filter_hosts=esx02.example.com, esx04.example.com
 ```
@@ -167,12 +167,24 @@ After you login click on the Subscriptions link in the upper left hand corner of
 On the Subscriptions page, click the Systems tab.  On the Systems page you will see the hypervisors that virt-who is aware of via the virt-who.conf file.  
 ![Subscriptions | Systems](images/virtwho02.png)
   
-Click on a hypervisor lin in the Systems page to get to the detial information for the hypervisor.
+Click on a hypervisor link in the Systems page to get to the detail information for the hypervisor.
 ![Systems | Details](images/virtwho03.png)
 
 From the Systems page, if you chose a RHEL instance, you will also be able to the hypervisor that the RHEL VM is running on in the RHEL instance's Detail page.
 
 ![Sytem | Details](images/virtwho04.png)
+
+Now let's head over to the Red Hat Hybrid Console and login.
+![Red Hat Hybrid Console[(cloud.redhat.com/)
+
+After you login the Red Hat Hybrid Console, chose Red Hat Enterprise Linux from the side menu.
+![Red Hat Enterprise Linux](images/virtwho05.png)
+
+On the Red Hat Enterprise Linux page expand the Subscriptions option on the side menu and click the All RHEL link.  Scroll down on the subscription page to Insights registered RHEL servers and VMWare Hypervisors that are hosting RHEL VMs.
+![All RHEL](images/virtwho06.png)
+
+You can exand the VMWare Hypervisor link to see what guests machines are running on a particular hypervisor.  Also note that when the VMWare Hypervisor fist shows inthe All RHEL subscription section, it is listed with a UUID.  We will change the UUID to the hypervisor name in the next steps.
+![Hypervisor list](images07.png)
 
 
 
