@@ -186,6 +186,17 @@ On the Red Hat Enterprise Linux page expand the Subscriptions option on the side
 You can exand the VMWare Hypervisor link to see what guests machines are running on a particular hypervisor.  Also note that when the VMWare Hypervisor fist shows inthe All RHEL subscription section, it is listed with a UUID.  We will change the UUID to the hypervisor name in the next steps.
 ![Hypervisor list](images/virtwho07.png)
 
+To update the hypervsior name from the UUID to something more meaningful, click on the hypervisor link in the All RHEL page.
+![Hypervisor Link](images/virtwho08.png)
+
+You will be taken to the Inventory page of the Hypervisor.  On the Inventory page, click the pencil icon next the Display Name to change the Display Name.
+![Display Name](images/virtwho09.png)
+
+A dialog box will open where you can edit the Display name.  After changing the Display name click the blue Save button.  Repeat this step for the Ansible hostname.
+![Edit Display Name](images/virthwo10.png)
+
+Back on the Inventory page, you will see the Display name has been updated.  The display name in the Subscrticiptons | All RHEL page will be update after the next check with the Red Hat Hybrid Consoles which typically will happen in 24 hours.
+![Hypervisor Inventory Page](images/virtwho11.png)
 
 
 ### Trouble shooting and additional notes
