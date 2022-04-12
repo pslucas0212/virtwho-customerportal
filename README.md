@@ -57,7 +57,7 @@ If virt-who is not installed, let's install it.
 Complete!
 ```
 
-The virt-who installation creates template configuration file that we can use to setup virt-who for environment.  The template configuration file is located under the /etc/virt-who.d/ directory.  
+The virt-who installation creates a template configuration file that we can use to setup virt-who for our VMWare cluster.  The template configuration file is located under the /etc/virt-who.d/ directory.  
 
 
 We will create the virt-who.conf file. Before edting the file we need the organzation id under which the RHEL VM is registered. 
