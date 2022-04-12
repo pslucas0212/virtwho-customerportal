@@ -16,7 +16,7 @@ I registered the system with an activation key to Red Hat customer portal. Remem
 # subscription-manager register --org=xxxxxxxxx --activationkey=your_key_here
 ```
 
-When using SCA, I am not attaching a subscription to my RHEL VM. When you run subscription-manage status, you will see that SCA is enabled and that you can attach any required content repositories to your RHEL VM.
+When using SCA, I am not attaching a subscription to my RHEL VM. When you run subscription-manager status, you will see that SCA is enabled and that you can attach any required content repositories to your RHEL VM.
 ```
 # subscription-manager status
 +-------------------------------------------+
