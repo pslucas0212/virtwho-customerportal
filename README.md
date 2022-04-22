@@ -183,13 +183,13 @@ After you login to the Red Hat Hybrid Cloud Console, choose Red Hat Enterprise L
 On the Red Hat Enterprise Linux page expand the Subscriptions option on the side menu and click the All RHEL link.  Scroll down on the subscription page to Insights registered RHEL servers and VMWare Hypervisors that are hosting RHEL VMs.
 ![All RHEL](images/virtwho06.png)
 
-You can expand the VMWare Hypervisor link to see what guest machines are running on a particular hypervisor.  Also note that when the VMWare Hypervisor name first shows up in the All RHEL subscription section, it is listed as a UUID.  We will change the UUID to the hypervisor name in the next steps.
+You can expand the VMWare Hypervisor link to see what guest machines are running on a particular hypervisor.  Also note that when the VMWare Hypervisor hostname first shows up in the All RHEL subscription section, it is listed as a UUID.  We will change the UUID to the hypervisor name in the next steps.
 ![Hypervisor list](images/virtwho07.png)
 
-To update the hypervsior name from the UUID to something more meaningful, click on the hypervisor link in the All RHEL page.
+To update the hypervsior hostname from the UUID to something more meaningful, click on the hypervisor link in the All RHEL page.
 ![Hypervisor Link](images/virtwho08.png)
 
-You will be taken to the Inventory page of the Hypervisor.  On the Inventory page, click the pencil icon next the Display Name to change the Display Name.
+You will be taken to the Inventory page of the Hypervisor.  On the Inventory page, click the pencil icon next the Display Name to change the Display Name to the hypervior's hostname.
 ![Display Name](images/virtwho09.png)
 
 A dialog box will open where you can edit the Display name.  After changing the Display name click the blue Save button.  Repeat this step for the Ansible hostname.
