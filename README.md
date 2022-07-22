@@ -199,7 +199,7 @@ Back on the Inventory page, you will see the Display name has been updated to th
 ![Hypervisor Inventory Page](images/virtwho11.png)
 
 
-### Trouble hooting and additional notes
+### Troubleshooting and additional notes
 - In this tutorial my vSphere Client version is 6.7.0.47000. I created the virt-who user id under the Administration - Single Sign-on - User and Groups menu. The user id  "virt-who" is part of the vsphere.local domain.  Under the Administration - Access Control - Global Permissions menu, I create a Read-Only permission with virt-who as the user.  
 - Test the virt-who VMWare user id and password with a vSphere client.
 - Test virt-who VMWare user id with the password unencrypted in the virt-who conf file.  When the test is successful, encrypt the password and retest
